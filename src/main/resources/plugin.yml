@@ -1,0 +1,37 @@
+name: ZQShop
+main: cn.yzq25.shop.ShopMain
+version: "1.0.0"
+api: ["1.0.0"]
+load: POSTWORLD
+
+author: Yanziqing25
+description: ZQ商店插件
+website: http://www.yzq25.cn
+
+softdepend:
+  - ZQExtension
+  - Money
+  - ZQWorlds
+depend:
+  - ZQExtension
+  - Money
+
+permissions:
+  shop:
+    children:
+      shop.command:
+        children:
+          shop.command.addpublicshop:
+            default: op
+          shop.command.addprivateshop:
+            default: true
+          shop.command.addrecycleshop:
+            default: op
+          shop.command.removeshop:
+            default: true
+          shop.command.cancelshop:
+            default: true
+      shop.destroy:
+        default: op
+      shop.modify:
+        default: op
